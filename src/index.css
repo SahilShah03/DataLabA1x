@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 5% 10%; /* Dark background */
+    --foreground: 0 0% 95%;   /* Light text */
+
+    --card: 240 5% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 5% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 270 95% 75%;   /* Purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 270 95% 75%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 16%;
+    --input: 240 5% 16%;
+    --ring: 270 95% 75%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables */
+    --sidebar-background: 240 5% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 270 95% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 16%;
+    --sidebar-ring: 270 95% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-brand-dark text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .pattern-dots {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-purple-400 to-brand-purple-600 bg-clip-text text-transparent;
+  }
+  
+  .glassmorphism {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+
+  .hero-card {
+    @apply bg-gradient-to-br from-brand-purple-500/20 to-brand-purple-900/20 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden;
+  }
+  
+  .feature-card {
+    @apply bg-gradient-to-br from-secondary to-secondary/80 border border-white/5 rounded-xl overflow-hidden;
+  }
+}
